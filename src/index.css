@@ -1,7 +1,5 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Nunito;
-    background: #EBEAEA;
-}
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Nunito:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

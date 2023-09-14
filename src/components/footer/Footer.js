@@ -5,7 +5,6 @@ import { CiFaceSmile } from "react-icons/ci";
 
 function Footer() {
   return (
-    <div>
       <footer className='bg-firstColor text-secondColor font-nunito'>
         <div className='container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col'>
           <a href='https://github.com/dilarauluturhan/crea-touch' target='blank' className='flex font-bold items-center md:justify-start justify-center'>
@@ -27,7 +26,6 @@ function Footer() {
           </span>
         </div>
       </footer>
-    </div>
   )
 }
 

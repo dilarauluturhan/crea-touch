@@ -10,7 +10,7 @@ function Navbar() {
       <div className='font-adlam text-5xl text-secondColor mb-1'>CreaTouch</div>
       <div className='relative font-nunito mb-1'>
         <input type='search' className='block w-96 p-4 pl-5 text-md text-secondColor border border-gray-300 rounded-lg bg-gray-50 focus:ring-thirdColor focus:border-thirdColor' placeholder='Search...' required />
-        <button type='submit' className='text-white absolute right-3 bottom-3 bg-thirdColor hover:bg-fourthColor rounded-lg px-4 py-2'>
+        <button type='submit' className='text-white absolute right-3 bottom-3 bg-secondColor hover:bg-thirdColor rounded-lg px-4 py-2'>
           <CiSearch className='w-5 h-5 text-white' />
         </button>
       </div>

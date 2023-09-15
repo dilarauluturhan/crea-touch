@@ -6,7 +6,7 @@ import Footer from './components/footer/Footer';
 
 function App() {
   return (
-    <div>
+    <div className='bg-firstColor'>
       <Router>
         <Navbar />
         <Routes>

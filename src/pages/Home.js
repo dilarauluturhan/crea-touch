@@ -9,7 +9,7 @@ function Home() {
     <div>
       <Header />
       <Sorting />
-      <div className='flex'>
+      <div className='flex container mx-auto gap-4'>
         <Category />
         <Products />
       </div>

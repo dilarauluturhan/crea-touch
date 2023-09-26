@@ -1,4 +1,3 @@
-import React from 'react';
 import { CiLinkedin } from "react-icons/ci";
 import { CiCoffeeCup } from "react-icons/ci";
 import { CiFaceSmile } from "react-icons/ci";

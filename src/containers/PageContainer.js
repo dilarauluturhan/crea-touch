@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function PageContainer({ children }) {
     return (
@@ -6,4 +6,4 @@ function PageContainer({ children }) {
     )
 }
 
-export default PageContainer
+export default PageContainer;

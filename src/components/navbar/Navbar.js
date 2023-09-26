@@ -1,10 +1,10 @@
-import React from 'react';
 import { CiSearch } from "react-icons/ci";
 import { CiUser } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
 
 function Navbar() {
+
   return (
     <navbar className='container mx-auto flex flex-wrap flex-col md:flex-row items-center justify-between px-5 py-8'>
       <div className='font-adlam text-5xl text-secondColor mb-1'>CreaTouch</div>

@@ -12,7 +12,7 @@ function Category() {
 
   return (
     <div className='w-1/6 font-nunito'>
-      <div className="text-xl font-bold mb-2">Category</div>
+      <div className="text-xl font-bold mb-2 border-b-4">Category</div>
       {categories?.map((category, i) => (
         <div
           className="flex items-center cursor-pointer p-2 ml-1 text-lg hover:bg-secondColor hover:text-firstColor hover:rounded-lg hover:duration-150"

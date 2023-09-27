@@ -1,10 +1,13 @@
-import React from 'react';
+import { useState } from 'react';
 import Header from '../components/header/Header';
 import Sorting from '../components/home/Sorting';
 import Category from '../components/home/Category';
 import Products from '../components/home/Products';
 
 function Home() {
+  const [sort, setSort] = useState('');
+  const [category, setCategory] = useState('');
+
   return (
     <div>
       <Header />

@@ -12,9 +12,9 @@ function Home() {
     <div>
       <Header />
       <Sorting />
-      <div className='flex container mx-auto gap-4'>
-        <Category />
-        <Products />
+      <div className='flex container mx-auto gap-x-14'>
+        <Category setCategory={setCategory} />
+        <Products category={category}/>
       </div>
     </div>
   )

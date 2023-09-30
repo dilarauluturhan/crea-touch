@@ -1,5 +1,5 @@
-import { BsArrowLeftSquare } from 'react-icons/bs';
-import { BsArrowRightSquare } from 'react-icons/bs';
+import {GoArrowLeft} from 'react-icons/go';
+import {GoArrowRight} from 'react-icons/go';
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     const pageNumbers = [];
@@ -10,18 +10,22 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
 
     return (
         <section>
-            <ul className='flex items-center justify-center gap-x-7 font-nunito'>
+            <ul className='flex items-center justify-center md:justify-end -space-x-px text-md md:text-xl bg-transparent'>
                 {currentPage > 1 && (
                     <li>
-                        <button onClick={() => onPageChange(currentPage - 1)}>
-                            <BsArrowLeftSquare size={32}/>
+                        <button
+                            className='px-3 h-8 ml-0 leading-tight border border-secondColor rounded-l-lg hover:bg-gray-50 hover:text-secondColor 
+                        '
+                            onClick={() => onPageChange(currentPage - 1)}>
+                            <GoArrowLeft/>
                         </button>
                     </li>
                 )}
                 {pageNumbers.map((number) => (
                     <li key={number}>
                         <button
-                            className={`px-3 py-1 text-lg ${currentPage === number
+                            className={`px-3 h-8 leading-tight border border-secondColor hover:bg-gray-100 hover:text-gray-700 
+                                    ${currentPage === number
                                     ? "bg-secondColor text-firstColor rounded"
                                     : "bg-firstColor text-secondColor"
                                 }`}
@@ -33,8 +37,10 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
                 ))}
                 {currentPage < totalPages && (
                     <li>
-                        <button onClick={() => onPageChange(currentPage + 1)}>
-                            <BsArrowRightSquare size={32}/>
+                        <button
+                            className='px-3 h-8 leading-tight border border-secondColor rounded-r-lg hover:bg-gray-50 hover:text-secondColor'
+                            onClick={() => onPageChange(currentPage + 1)}>
+                           <GoArrowRight/>
                         </button>
                     </li>
                 )}

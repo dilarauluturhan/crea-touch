@@ -5,7 +5,7 @@ import Loading from "../Loading";
 import Product from "./Product";
 import Pagination from "./Pagination";
 
-function Products({ category }) {
+function Products({ category, sort }) {
   const dispatch = useDispatch();
   const { products, productsStatus } = useSelector(state => state.products);
   const [currentPage, setCurrentPage] = useState(1);
@@ -46,9 +46,11 @@ function Products({ category }) {
         ) : (
           <>
             <div className="flex flex-wrap">
-              {currentProducts.map((product, i) => (
-                <Product key={i} product={product} />
-              ))}
+              {currentProducts
+                ?.sort((a, b) => sort === "low" ? a.price - b.price : sort === "high" ? b.price - a.price : "")
+                ?.map((product, i) => (
+                  <Product key={i} product={product} />
+                ))}
             </div>
             <Pagination
               currentPage={currentPage}

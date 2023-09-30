@@ -11,10 +11,10 @@ function Home() {
   return (
     <div>
       <Header />
-      <Sorting />
+      <Sorting setSort={setSort} />
       <div className='flex container mx-auto gap-x-14'>
         <Category setCategory={setCategory} />
-        <Products category={category}/>
+        <Products category={category} sort={sort}/>
       </div>
     </div>
   )

@@ -5,7 +5,7 @@ import Loading from "../Loading";
 import Product from "./Product";
 import Pagination from "./Pagination";
 
-function Products({category}) {
+function Products({ category }) {
   const dispatch = useDispatch();
   const { products, productsStatus } = useSelector(state => state.products);
   const [currentPage, setCurrentPage] = useState(1);
@@ -16,9 +16,9 @@ function Products({category}) {
   // kategoride her değer değiştiğinde veri çekme işlemini useEffect tekrar yapsın
   // hem tüm ürünleri getirebilsin hem de kategoriye göre ürün getirebilsin
   useEffect(() => {
-    if(category){
+    if (category) {
       dispatch(getCategoryProducts(category))
-    }else{
+    } else {
       dispatch(getProducts())
     }
     dispatch(getProducts())

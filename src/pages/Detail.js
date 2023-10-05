@@ -5,7 +5,6 @@ import { getDetailProducts } from '../redux/productSlice';
 import DetailComp from '../components/detail/DetailComp';
 import Loading from '../components/Loading';
 
-
 const Detail = () => {
     const { id } = useParams();
     const dispatch = useDispatch();
@@ -27,4 +26,4 @@ const Detail = () => {
     )
 }
 
-export default Detail
+export default Detail;

@@ -1,23 +1,22 @@
-import {GoArrowLeft} from 'react-icons/go';
-import {GoArrowRight} from 'react-icons/go';
+import { GoArrowLeft } from 'react-icons/go';
+import { GoArrowRight } from 'react-icons/go';
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     const pageNumbers = [];
 
     for (let i = 1; i <= totalPages; i++) {
         pageNumbers.push(i);
-    }
+    };
 
     return (
         <section>
-            <ul className='flex items-center justify-center md:justify-end -space-x-px text-md md:text-xl bg-transparent'>
+            <ul className="flex items-center justify-center md:justify-end -space-x-px text-md md:text-xl bg-transparent">
                 {currentPage > 1 && (
                     <li>
                         <button
-                            className='px-3 h-8 ml-0 leading-tight border border-secondColor rounded-l-lg hover:bg-gray-50 hover:text-secondColor 
-                        '
+                            className="px-3 h-8 ml-0 leading-tight border border-secondColor rounded-l-lg hover:bg-gray-50 hover:text-secondColor"
                             onClick={() => onPageChange(currentPage - 1)}>
-                            <GoArrowLeft/>
+                            <GoArrowLeft />
                         </button>
                     </li>
                 )}
@@ -38,9 +37,9 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
                 {currentPage < totalPages && (
                     <li>
                         <button
-                            className='px-3 h-8 leading-tight border border-secondColor rounded-r-lg hover:bg-gray-50 hover:text-secondColor'
+                            className="px-3 h-8 leading-tight border border-secondColor rounded-r-lg hover:bg-gray-50 hover:text-secondColor"
                             onClick={() => onPageChange(currentPage + 1)}>
-                           <GoArrowRight/>
+                            <GoArrowRight />
                         </button>
                     </li>
                 )}

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { getCategoryProducts, getProducts } from "../../redux/productSlice";
-import Loading from "../Loading";
 import Product from "./Product";
 import Pagination from "./Pagination";
 
@@ -42,7 +41,7 @@ function Products({ category, sort }) {
     <div>
       {
         productsStatus === "LOADING" ? (
-          <Loading />
+          <div className="border-firstColor h-14 w-14 animate-spin rounded-full border-8 border-t-thirdColor ml-[25rem] mt-10" />
         ) : (
           <>
             <div className="flex flex-wrap">
@@ -63,4 +62,4 @@ function Products({ category, sort }) {
   )
 }
 
-export default Products
+export default Products;

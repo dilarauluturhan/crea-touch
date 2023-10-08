@@ -11,7 +11,7 @@ function Category({ setCategory }) {
   }, [dispatch]);
 
   return (
-    <div className='w-1/6 font-nunito ml-7'>
+    <div className="w-1/6 font-nunito ml-7">
       <div className="text-xl font-bold mb-2 border-b-4">Category</div>
       {categories?.map((category, i) => (
         <div

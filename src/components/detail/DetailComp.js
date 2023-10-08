@@ -1,4 +1,3 @@
-import { CiHeart } from "react-icons/ci";
 import { CiFacebook } from "react-icons/ci";
 import { CiTwitter } from "react-icons/ci";
 import { CiChat1 } from "react-icons/ci";
@@ -10,7 +9,7 @@ const DetailComp = ({ productDetail }) => {
 
     const addCart = () => {
         dispatch(addToCart({ id: productDetail?.id, title: productDetail?.title, image: productDetail?.image, price: productDetail?.price }))
-    }
+    };
 
     return (
         <section className="text-gray-600 font-nunito overflow-hidden h-screen">
@@ -39,13 +38,13 @@ const DetailComp = ({ productDetail }) => {
                                 <span className="text-gray-600 ml-3">{productDetail?.rating?.rate}</span>
                             </span>
                             <span className="flex ml-3 pl-3 py-2 border-l-2 border-gray-200 space-x-2s">
-                                <a href='#\' className="text-gray-500">
+                                <a href="#\" className="text-gray-500">
                                     <CiFacebook size={28} />
                                 </a>
-                                <a href='#\' className="text-gray-500 mx-0.5">
+                                <a href="#\" className="text-gray-500 mx-0.5">
                                     <CiTwitter size={28} />
                                 </a>
-                                <a href='#\' className="text-gray-500">
+                                <a href="#\" className="text-gray-500">
                                     <CiChat1 size={28} />
                                 </a>
                             </span>
@@ -82,9 +81,6 @@ const DetailComp = ({ productDetail }) => {
                                 className="flex ml-auto text-white bg-thirdColor hover:bg-fourthColor border-0 py-2 px-6 focus:outline-none rounded-lg"
                             >
                                 Add to cart
-                            </button>
-                            <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
-                                <CiHeart size={32} />
                             </button>
                         </div>
                     </div>

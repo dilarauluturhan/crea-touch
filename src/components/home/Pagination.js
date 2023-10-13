@@ -10,7 +10,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
 
     return (
         <section className="mb-12 mt-6">
-            <ul className="flex items-center justify-center -space-x-px text-md md:text-xl bg-transparent">
+            <ul className="flex items-center justify-center md:mr-11 md:justify-end -space-x-px text-md md:text-xl bg-transparent">
                 {currentPage > 1 && (
                     <li>
                         <button

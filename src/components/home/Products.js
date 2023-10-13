@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { getCategoryProducts, getProducts } from "../../redux/productSlice";
 import Product from "./Product";
 import Pagination from "./Pagination";
+import HomeLoading from "../HomeLoading";
 
 function Products({ category, sort }) {
   const dispatch = useDispatch();
@@ -41,7 +42,7 @@ function Products({ category, sort }) {
     <div>
       {
         productsStatus === "LOADING" ? (
-          <div className="border-firstColor h-14 w-14 animate-spin rounded-full border-8 border-t-thirdColor ml-[25rem] mt-10" />
+          <HomeLoading />
         ) : (
           <>
             <div className="flex flex-wrap">

@@ -9,12 +9,12 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     };
 
     return (
-        <section>
-            <ul className="flex items-center justify-center md:justify-end -space-x-px text-md md:text-xl bg-transparent">
+        <section className="mb-12 mt-6">
+            <ul className="flex items-center justify-center -space-x-px text-md md:text-xl bg-transparent">
                 {currentPage > 1 && (
                     <li>
                         <button
-                            className="px-3 h-8 ml-0 leading-tight border border-secondColor rounded-l-lg hover:bg-gray-50 hover:text-secondColor"
+                            className="px-5 h-10 ml-0 leading-tight border border-gray-400 rounded-l-lg text-gray-700"
                             onClick={() => onPageChange(currentPage - 1)}>
                             <GoArrowLeft />
                         </button>
@@ -23,10 +23,10 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
                 {pageNumbers.map((number) => (
                     <li key={number}>
                         <button
-                            className={`px-3 h-8 leading-tight border border-secondColor hover:bg-gray-100 hover:text-gray-700 
+                            className={`px-5 h-10 leading-tight border border-gray-400 
                                     ${currentPage === number
-                                    ? "bg-secondColor text-firstColor rounded"
-                                    : "bg-firstColor text-secondColor"
+                                    ? "bg-thirdColor text-firstColor rounded"
+                                    : "bg-firstColor text-gray-700"
                                 }`}
                             onClick={() => onPageChange(number)}
                         >
@@ -37,7 +37,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
                 {currentPage < totalPages && (
                     <li>
                         <button
-                            className="px-3 h-8 leading-tight border border-secondColor rounded-r-lg hover:bg-gray-50 hover:text-secondColor"
+                            className="px-5 h-10 leading-tight border border-gray-400 rounded-r-lg text-gray-700"
                             onClick={() => onPageChange(currentPage + 1)}>
                             <GoArrowRight />
                         </button>

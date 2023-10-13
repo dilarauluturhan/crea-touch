@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import { CiSearch } from "react-icons/ci";
-import { CiUser } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
 import { useDispatch, useSelector } from "react-redux";
 import { getCartTotal } from "../../redux/cartSlice";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/img/crea-touch-3.png";
+import User from "../user/User";
 
 function Navbar() {
   const dispatch = useDispatch();
@@ -29,7 +29,7 @@ function Navbar() {
         </button>
       </div>
       <div className="flex items-center">
-        <CiUser className="w-9 h-9 cursor-pointer hover:text-thirdColor" />
+        <User />
         <CiHeart className="w-9 h-9 cursor-pointer ml-1 hover:text-thirdColor" />
         <div className="rounded-full w-6 h-6 flex items-center justify-center text-firstColor bg-secondColor font-nunito">
           0

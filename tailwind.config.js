@@ -7,7 +7,6 @@ module.exports = {
     extend: {
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],
-        adlam: ['ADLaM Display', 'cursive']
       },
       colors: {
         'firstColor': '#EBEAEA',

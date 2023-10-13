@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function Login() {
     return (
@@ -6,7 +7,7 @@ function Login() {
             <div className="py-6 flex flex-col justify-center sm:py-32 sm:max-w-sm sm:mx-auto">
                 <div className="relative px-4 py-10 bg-white text-secondColor font-nunito shadow-lg sm:rounded-lg sm:p-20 w-[450px] h-[520px]">
                     <div className="-mt-7">
-                        <h1 className="text-2xl text-center font-semibold">Login to your account</h1>
+                        <h1 className="text-2xl text-center font-bold">Login to your account</h1>
                     </div>
                     <div>
                         <button className="group h-12 px-10 mt-5 border-2 border-secondColor rounded-lg transition duration-300 hover:border-thirdColor">
@@ -49,7 +50,7 @@ function Login() {
                             </div>
                             <div>
                                 <p className="text-sm font-semibold text-secondColor text-center">
-                                    Don’t have an account yet? <a href="#\" className="font-bold text-thirdColor hover:underline ml-1">Sign up</a>
+                                    Don&apos;t have an account yet? <Link to="/signup" className="font-bold text-thirdColor hover:underline ml-1">Sign up</Link>
                                 </p>
                             </div>
                         </div>

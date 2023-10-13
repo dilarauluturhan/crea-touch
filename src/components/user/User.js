@@ -40,7 +40,7 @@ function User() {
                         onClick={signupPage}
                         className="block text-secondColor hover:text-thirdColor px-4 py-2"
                     >
-                        Signup
+                        Sign up
                     </button>
                 </div>
             )}

@@ -1,14 +1,22 @@
 import { CiFacebook } from "react-icons/ci";
 import { CiTwitter } from "react-icons/ci";
 import { CiChat1 } from "react-icons/ci";
+import { CiShoppingCart } from "react-icons/ci";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
+import toast, { Toaster } from 'react-hot-toast';
 
 const DetailComp = ({ productDetail }) => {
     const dispatch = useDispatch();
 
     const addCart = () => {
         dispatch(addToCart({ id: productDetail?.id, title: productDetail?.title, image: productDetail?.image, price: productDetail?.price }))
+    };
+
+    const notify = () => {
+        toast('Added to the cart!', {
+            icon: '🛒',
+        });
     };
 
     return (
@@ -80,7 +88,11 @@ const DetailComp = ({ productDetail }) => {
                                 onClick={addCart}
                                 className="flex ml-auto text-white bg-thirdColor hover:bg-fourthColor border-0 py-2 px-6 focus:outline-none rounded-lg"
                             >
-                                Add to cart
+                                <CiShoppingCart onClick={notify} size={32} />
+                                <Toaster
+                                    position="bottom-right"
+                                    reverseOrder={false}
+                                />
                             </button>
                         </div>
                     </div>

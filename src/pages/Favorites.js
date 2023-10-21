@@ -10,7 +10,7 @@ function Favorites() {
   return (
     <div>
       {
-        favoriteProducts?.length > 0 ? <div>
+        favoriteProducts?.length > 0 ? <div className="h-screen">
           {
             favoriteProducts?.map((product) => (
               <div

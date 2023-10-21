@@ -2,6 +2,7 @@ import { CiHeart } from "react-icons/ci";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addToFavorites, removeFromFavorites } from "../../redux/favoriteSlice";
+import toast, { Toaster } from 'react-hot-toast';
 
 const Product = ({ product, isFavorite }) => {
   const navigate = useNavigate();
@@ -13,6 +14,12 @@ const Product = ({ product, isFavorite }) => {
     } else {
       dispatch(addToFavorites(product));
     }
+  };
+
+  const notify = () => {
+    toast('Added to the favorite!', {
+      icon: '🤎',
+    });
   };
 
   return (
@@ -49,11 +56,14 @@ const Product = ({ product, isFavorite }) => {
               For detail
             </a>
             <button
-              className={`rounded-full w-10 h-10 bg-gray-100 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4 
-            ${isFavorite ? "text-red-500" : ""}`}
+              className={"rounded-full w-10 h-10 bg-gray-100 p-0 border-0 inline-flex items-center justify-center ml-4"}
               onClick={handleFavoriteClick}
             >
-              <CiHeart size={32} />
+              <CiHeart onClick={notify} size={32} />
+              <Toaster
+                position="bottom-right"
+                reverseOrder={false}
+              />
             </button>
           </div>
         </div>

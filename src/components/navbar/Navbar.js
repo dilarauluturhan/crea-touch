@@ -13,6 +13,10 @@ function Navbar() {
   const navigate = useNavigate();
   const { carts } = useSelector(state => state.carts);
 
+  const favoritePage = () => {
+    navigate('/favorites');
+  };
+
   useEffect(() => {
     dispatch(getCartTotal())
   }, [dispatch]);
@@ -30,10 +34,9 @@ function Navbar() {
       </div>
       <div className="flex items-center">
         <User />
-        <CiHeart className="w-9 h-9 ml-3 cursor-pointer hover:text-thirdColor" />
-        <div className="rounded-full w-6 h-6 flex items-center justify-center text-firstColor bg-secondColor font-nunito">
-          0
-        </div>
+        <CiHeart
+        onClick={favoritePage}
+        className="w-9 h-9 ml-3 cursor-pointer hover:text-thirdColor" />
         <CiShoppingCart
           onClick={() => navigate("cart")}
           className="w-9 h-9 ml-3 cursor-pointer hover:text-thirdColor" />

@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { getCartTotal } from "../redux/cartSlice";
 import CartComp from "../components/cart/CartComp";
+import Empty from "../components/Empty";
 
 const Cart = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { carts, totalAmount } = useSelector(state => state.carts);
 
@@ -38,11 +38,7 @@ const Cart = () => {
           </div>
         </div>
           :
-          <div className="h-screen bg-firstColor pt-20 font-nunito flex flex-col items-center">
-            <iframe src="https://giphy.com/embed/DZgUVLxzMoAwg" className="w-96 md:w-[480px] h-[310px] rounded-lg" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/shopping-DZgUVLxzMoAwg"></a></p>
-            <p className="text-2xl md:text-4xl mt-5">You don’t have any items in your cart.</p>
-            <Link to="/" className="text-xl md:text-3xl text-thirdColor hover:text-fourthColor mt-5">Explore CreaTouch</Link>
-          </div>
+          <Empty />
       }
     </div>
   )

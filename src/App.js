@@ -6,6 +6,7 @@ import Detail from './pages/Detail';
 import Cart from './pages/Cart';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Favorites from './pages/Favorites';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/favorites" element={<Favorites />} />
         </Routes>
         <Footer />
       </Router>

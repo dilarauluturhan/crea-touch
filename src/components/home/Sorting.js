@@ -1,5 +1,4 @@
 function Sorting({ setSort }) {
-
   return (
     <div
       onChange={(e) => setSort(e.target.value)}

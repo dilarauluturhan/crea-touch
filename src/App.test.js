@@ -1,8 +1,16 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import User from './components/user/User';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe('User component test', () => {
+  test('Should render user component text Login', () => {
+    render(<User />);
+    const element = screen.getByText('Login');
+    expect(element).toBeInTheDocument();
+  })
+
+  test('Should render user component text Signup', () => {
+    render(<User />);
+    const element = screen.getByText('Sign up');
+    expect(element).toBeInTheDocument();
+  })
+})

@@ -14,6 +14,7 @@ const storeInLocalStorage = (data) => {
     localStorage.setItem('cart', JSON.stringify(data))
 }
 
+// miktar ve total hesaplama
 const initialState = {
     carts: fetchFromLocalStorage(),
     itemCount: 0,
@@ -57,7 +58,7 @@ const cartSlice = createSlice({
         },
         getCartTotal: (state) => {
             state.totalAmount = state.carts.reduce((cartTotal, cartItem) => {
-                return cartTotal += cartItem.price
+                return cartTotal += cartItem.price * cartItem.quantity
             }, 0)
             state.itemCount = state.carts.length;
         }

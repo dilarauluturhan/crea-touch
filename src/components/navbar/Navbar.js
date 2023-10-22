@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { CiSearch } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { getCartTotal } from "../../redux/cartSlice";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/img/crea-touch-3.png";
@@ -11,7 +11,6 @@ import User from "../user/User";
 function Navbar() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { carts } = useSelector(state => state.carts);
 
   const favoritePage = () => {
     navigate('/favorites');
@@ -35,14 +34,11 @@ function Navbar() {
       <div className="flex items-center">
         <User />
         <CiHeart
-        onClick={favoritePage}
-        className="w-9 h-9 ml-3 cursor-pointer hover:text-thirdColor" />
+          onClick={favoritePage}
+          className="w-9 h-9 ml-3 cursor-pointer hover:text-thirdColor" />
         <CiShoppingCart
           onClick={() => navigate("cart")}
           className="w-9 h-9 ml-3 cursor-pointer hover:text-thirdColor" />
-        <div className="rounded-full w-6 h-6 flex items-center justify-center text-firstColor bg-secondColor font-nunito">
-          {carts?.length}
-        </div>
       </div>
     </navbar>
   )

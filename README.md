@@ -22,8 +22,10 @@ CreaTouch is an e-commerce site.
 ## Built With
 - **Reactjs**: For building the user interface.
 - **Redux Toolkit**: For manage all transactions related to products.
+- **React-Router-Dom**: For page transitions.
 - **React Icons**: For displaying various icons throughout the application.
 - **Tailwind CSS**: For styling the application.
+- **Framer-Motion**: For the animation of the home page.
 - **Local Storage**: For keep the add to cart and favorite.
 - **React-Hot-Toast**: For send notifications to the user.
 - **React Testing Library**: For test the product.
